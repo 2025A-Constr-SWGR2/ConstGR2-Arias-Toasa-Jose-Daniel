@@ -7,8 +7,7 @@ jobs:
     runs-on: [self-hosted]
     steps:
       - name: Set PowerShell Execution Policy (process-wide)
-        run: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
-        shell: pwsh
+        run: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Forces
 
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
