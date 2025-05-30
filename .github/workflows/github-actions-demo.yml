@@ -5,9 +5,12 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: [self-hosted]
+    defaults:
+      run:
+        shell: powershell
     steps:
-      - name: Set PowerShell Execution Policy (process-wide)
-        run: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Forces
+      - name: Set Execution Policy
+        run: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
 
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
