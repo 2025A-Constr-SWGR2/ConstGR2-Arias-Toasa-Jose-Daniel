@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moneda - Clean Code</title>
+    <style>
+        body { font-family: sans-serif; display: grid; place-content: center; height: 100vh; margin: 0; background-color: #f4f4f4; }
+        .container { background-color: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { text-align: center; }
+        .form-group { margin-bottom: 1rem; }
+        label, input, select, button { display: block; width: 100%; padding: 0.5rem; box-sizing: border-box; }
+        input, select { margin-top: 0.25rem; }
+        button { background-color: #007bff; color: white; border: none; cursor: pointer; margin-top: 1.5rem; }
+        #result-display { margin-top: 1rem; font-weight: bold; text-align: center; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Moneda</h1>
+        <div class="form-group">
+            <label for="amount-input">Monto:</label>
+            <input type="number" id="amount-input" value="100">
+        </div>
+        <div class="form-group">
+            <label for="from-currency-select">De:</label>
+            <select id="from-currency-select"></select>
+        </div>
+        <div class="form-group">
+            <label for="to-currency-select">A:</label>
+            <select id="to-currency-select"></select>
+        </div>
+        <button id="convert-button">Convertir</button>
+        <p id="result-display"></p>
+    </div>
+
+    <script type="module" src=".\js\main.js"></script>
+</body>
+</html>
