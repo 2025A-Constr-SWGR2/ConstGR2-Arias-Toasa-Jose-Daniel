@@ -2,6 +2,10 @@
 
 Este es un pequeño aplicativo web diseñado para convertir valores entre diferentes monedas. Su propósito principal es servir como un ejemplo práctico de cómo aplicar los principios de **Clean Code** detallados en la guía de `clean-code-javascript` y la presentación sobre `Clean Coding`.
 
+## Ejecución
+```bash
+ npx serve
+```
 ## Estructura de Archivos
 
 El proyecto está organizado para promover la **separación de responsabilidades**:
@@ -43,9 +47,12 @@ A continuación se detallan los conceptos aplicados y en qué archivos se pueden
 -   **Principio de Responsabilidad Única (SRP)**: Ya descrito en la sección de Funciones. [cite_start]Es la base de la estructura de archivos del proyecto. 
 -   [cite_start]**Principio de Inversión de Dependencias (DIP)**:  El módulo de alto nivel (`main.js`) no depende de los detalles de implementación de los módulos de bajo nivel. `main.js` solo sabe que `currencyService` puede obtener una tasa (`getExchangeRate`), pero no le importa si los datos vienen de un mock, una API REST o localStorage. Si quisiéramos cambiar la fuente de datos, solo modificaríamos `currencyService.js` sin afectar a `main.js`.
 
-### 5. Otros Principios Clave
+### 5. DRY
 
 -   [cite_start]**No Repetir Código (DRY)**:  La función `populateSelectWithOptions` en `domUtils.js` se creó para no repetir la lógica de rellenar los dos menús desplegables de monedas.
+
+### 6. Otros
 -   [cite_start]**Organización del código**:  Las funciones relacionadas están agrupadas en módulos coherentes, como se ve en la estructura de archivos.
 -   [cite_start]**Manejo de concurrencia con Promesas y Async/Await**:  Para simular una llamada a una API, `getExchangeRate` devuelve una Promesa y se consume en `main.js` con `async/await`, que es la forma más limpia y moderna de manejar la asincronía en JavaScript.
 -   [cite_start]**Manejo de errores**:  El bloque `try...catch` en `main.js` gestiona posibles fallos en la obtención de datos, informando al usuario y registrando el error en la consola, en lugar de ignorarlo.
+
