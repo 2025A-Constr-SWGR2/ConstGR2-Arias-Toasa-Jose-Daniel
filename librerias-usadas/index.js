@@ -3,10 +3,10 @@ const paqueteResta = require('2025a-swgr2-jdat-resta');
 const paqueteMultiplicacion = require('2025a-swgr2-jdat-multiplicacion');
 const paqueteDivision = require('2025a-swgr2-jdat-division');
 
-const respuestaSuma= paqueteSuma.suma(1, 2);
-const respuestaResta = paqueteResta.resta(5, 3);
-const respuestaMultiplicacion = paqueteMultiplicacion.multiplicacion(4, 2);
-const respuestaDivision = paqueteDivision.division(8, 2);
+const respuestaSuma= paqueteSuma.suma(2, 1);
+const respuestaResta = paqueteResta.resta(3, 2);
+const respuestaMultiplicacion = paqueteMultiplicacion.multiplicacion(2, 5);
+const respuestaDivision = paqueteDivision.division(9, 3);
 const respuestaDivisionPorCero = paqueteDivision.division(8, 0);
 
 console.log('La respuesta de la suma es: ', respuestaSuma);
